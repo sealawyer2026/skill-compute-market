@@ -1,0 +1,32 @@
+{
+  "name": "compute-market",
+  "version": "1.0.0",
+  "description": "Token算力市场 - 去中心化GPU算力交易平台",
+  "author": "Token Master Team",
+  "entry": "wrapper.py",
+  "commands": [
+    {
+      "name": "stats",
+      "description": "查看算力市场实时统计"
+    },
+    {
+      "name": "providers",
+      "description": "查看算力提供商列表"
+    },
+    {
+      "name": "tasks",
+      "description": "查看计算任务列表"
+    },
+    {
+      "name": "register",
+      "description": "注册成为算力提供商"
+    },
+    {
+      "name": "submit",
+      "description": "提交计算任务"
+    }
+  ],
+  "dependencies": ["requests"],
+  "homepage": "http://token-master.cn/shop/",
+  "api_endpoint": "http://compute.token-master.cn"
+}
