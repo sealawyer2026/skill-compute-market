@@ -1,0 +1,76 @@
+{
+  "version": "1.0.0",
+  "market": {
+    "name": "Token算力市场",
+    "platform_fee": 0.15,
+    "min_task_reward": 0.1,
+    "escrow_duration": 3600
+  },
+  "compute_types": [
+    {
+      "id": "gpu_rtx4090",
+      "name": "NVIDIA RTX 4090",
+      "vram_gb": 24,
+      "compute_power": 100,
+      "price_per_hour": 2.5
+    },
+    {
+      "id": "gpu_a100",
+      "name": "NVIDIA A100",
+      "vram_gb": 80,
+      "compute_power": 300,
+      "price_per_hour": 8.0
+    },
+    {
+      "id": "gpu_h100",
+      "name": "NVIDIA H100",
+      "vram_gb": 80,
+      "compute_power": 500,
+      "price_per_hour": 15.0
+    },
+    {
+      "id": "cpu_standard",
+      "name": "Standard CPU",
+      "cores": 16,
+      "compute_power": 20,
+      "price_per_hour": 0.5
+    }
+  ],
+  "task_types": [
+    {
+      "id": "inference",
+      "name": "模型推理",
+      "min_compute": 10,
+      "avg_duration": "5m"
+    },
+    {
+      "id": "training",
+      "name": "模型训练",
+      "min_compute": 50,
+      "avg_duration": "2h"
+    },
+    {
+      "id": "fine_tuning",
+      "name": "微调训练",
+      "min_compute": 30,
+      "avg_duration": "30m"
+    },
+    {
+      "id": "embedding",
+      "name": "向量嵌入",
+      "min_compute": 15,
+      "avg_duration": "10m"
+    }
+  ],
+  "scheduling": {
+    "algorithm": "cost_optimized",
+    "fallback_enabled": true,
+    "max_retries": 3,
+    "timeout_seconds": 600
+  },
+  "governance": {
+    "dao_enabled": false,
+    "voting_threshold": 1000,
+    "proposal_duration": 604800
+  }
+}
